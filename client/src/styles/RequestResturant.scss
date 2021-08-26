@@ -1,0 +1,311 @@
+@import './base.scss';
+
+.request-resturant{
+    width: 100%;
+    .resturant-request-content{
+        width: 100%;
+        height: 100vh;
+        padding-top: 106px;
+        background-image: url("../assets/chef.jpg");
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover;
+        
+    }
+    @media (max-width: 800px) {
+        .resturant-request-content{
+            height: 800px;
+        }
+    }
+    h2{
+        font-weight: 500;
+    }
+    .clickButton{
+        background: $primary-background-color;
+        padding: 8px 35px 12px 35px;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 2px;
+        font: inherit;
+        margin: 20px 0;
+        border: 1px solid $primary-background-color;
+    }
+    .clickButton:hover{
+        background: white;
+        color: $primary-background-hover-color;
+    }
+}
+.request-form{
+    width: 35%;
+    height: auto;
+    float: right;
+    margin-right: 5%;
+    padding-top: 20px;
+    text-align: center;
+    .request-form-new{
+      width: 100%;
+      height: auto;
+      background: white;
+      border-radius: 5px;
+      padding: 10px 0 20px 0;
+      h3{
+          margin: 0;
+          padding: 30px 0 20px 0;
+      }
+      input{
+          width: 85%;
+          padding: 12px 2%;
+          outline: none;
+          margin: 5px 0;
+          border: 1px solid #eee;
+          border-radius: 2px;
+      }
+      select{
+        width: 90%;
+        padding: 12px 2%;
+        outline: none;
+        margin: 5px 0;
+        border: 1px solid #eee;
+        border-radius: 2px;
+    }
+      button{
+          width: 90%;
+          padding: 12px 0;
+          background-color: $primary-background-color;
+          color: white;
+          margin-top: 20px;
+          text-transform: uppercase;
+          border-radius: 2px;
+      }
+      button:hover{
+          background-color: $primary-background-hover-color;
+      }
+      a{
+        padding: 4px 0;
+        width: 90%;
+        color: $primary-background-color;
+        display: inline-block;
+        margin-bottom: 20px;
+        border-radius: 3px;
+        font-weight: 500;
+    }
+    a:hover{
+       color: $primary-background-hover-color;
+       text-decoration: underline;
+    }
+    
+    }
+}
+.request-intro{
+    width: 50%;
+    height: 90%;
+    // background: red;
+    float: left;
+    margin-left: 5%;
+    padding-top: 6%;
+    h1{
+        color: #990328;
+        padding: 42px;
+        font-weight: bold;
+        font-size: 22px;
+        text-align: left;
+        background: white;
+        opacity: 0.8;
+        border: 9px solid #990328;
+        
+    }
+}
+
+.grow-business{
+   width: 100%;
+   height: 60vh;
+   padding: 40px 0;
+   p{
+    font-size: 20px;
+   }
+   .grow-business-content{
+       width: 90%;
+       height: 100%;
+       margin-left: 5%;
+       img{
+           width: 50%;
+           height: 100%;
+           float: left;
+       }
+       .grow-business-body{
+           width: 45%;
+           height: 100%;
+           float: right;
+       }
+       @media (max-width: 1000px){
+        img{
+            width: 100%;
+            height: 300px;
+        }
+        .grow-business-body{
+            width: 100%;
+            height: 300px;
+        }
+        
+    }
+   }
+  
+}
+.grow-business-2{
+   width: 100%;
+   height: 60vh;
+   padding: 40px 0;
+   background: $seconday-background;
+   p{
+    font-size: 20px;
+   }
+   .grow-business-content{
+       width: 90%;
+       height: 100%;
+       margin-left: 5%;
+       img{
+           width: 50%;
+           height: 100%;
+           float: right;
+       }
+       .grow-business-body{
+           width: 45%;
+           height: 100%;
+           float: left;
+       }
+       @media (max-width: 1000px){
+        img{
+            width: 100%;
+            height: 300px;
+        }
+        .grow-business-body{
+            width: 100%;
+            height: 300px;
+        }
+        
+    }
+   }
+}
+.request-confirmation-message{
+    width: 100%;
+    height: 100%;
+    p{
+        font-weight: 500;
+        padding: 0 30px;
+    }
+    a{
+        background-color: $primary-background-color;
+        color: white;
+        padding: 10px 15%;
+        display: inline-block;
+        margin: 10px 0;
+        border-radius: 2px;
+    }
+    a:hover{
+        background-color: $primary-background-hover-color;
+    }
+}
+.how-it-works-2{
+    width: 100%;
+    height: auto;
+    padding: 20px 0 35px 0;
+    text-align: center;
+    h1{
+        font-weight: 500;
+        font-size: 25px;
+        color: $primary-background-color;
+        padding: 50px 0;
+        margin: 0;
+    }
+    .work-steps{
+       width: 90%;
+       margin-left: 5%;
+       display: flex;
+       flex-flow: wrap;
+       justify-content: space-between;
+       padding-bottom: 30px;
+
+       .work-step{
+          width: 30%;
+          height: auto;
+          background: $seconday-background;
+          padding: 40px 0;
+          border-radius: 5px;
+          h3{
+              margin: 5px;
+              padding: 0;
+              font-size: 22px;
+              font-weight: 400;
+          }
+          img{
+              width: 120px;
+              height: 120px;
+              margin: 20px 0;
+          }
+       }
+    }
+ }
+
+@media(max-width:1000px){
+    .how-it-works-2{
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+        .work-steps{
+           width: 90%;
+           margin-left: 5%;
+           .work-step{
+              width: 100%;
+              height: auto;
+              margin-bottom: 10px;
+           }
+        }
+     }
+    .grow-business-2{
+        height: 730px;
+      
+    }
+    .resturant-request-content{
+        height: 800px;
+    }
+    .request-intro{
+        width: 100%;
+        height:200px;
+        margin-left: 0;
+        h1{
+            padding: 20px;
+            font-size: 20px;
+        }
+    }
+    .request-form{
+        width: 95%;
+        margin-right: 2.5%;
+    }
+  .grow-business{
+    width: 100%;
+    height: 670px;
+  }
+}
+@media(min-width: 1600px){
+    .request-form{
+        margin-right: 10%;
+    }
+    .request-intro{
+        width: 40%;
+        height: 90%;
+        margin-left: 10%;
+    }
+    .grow-business{
+        .grow-business-content{
+            width: 80%;
+            margin-left: 10%;
+        }
+    }
+    .grow-business-2{
+        .grow-business-content{
+            width: 80%;
+            margin-left: 10%;
+        }
+    }
+}

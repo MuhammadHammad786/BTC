@@ -1,0 +1,59 @@
+@import './base.scss';
+
+.about-content{
+    width: 90%;
+    margin-left: 5%;
+    padding: 80px 0;
+    h1{
+        color: $primary-background-color;
+    }
+    .about-1-img{
+        width: 100%;
+        height: 80vh;
+    }
+    .about-2{
+      width: 100%;
+      height: 60vh;
+      .about-2-content{
+          width: 40%;
+          float: left;
+          p{
+              font-size: 19px;
+              color: $primary-background-color;
+          }
+      }
+      img{
+          width: 55%;
+          height: 100%;
+          float: right;
+      }
+    }
+}
+@media(max-width: 800px){
+    
+.about-content{
+    .about-1-img{
+        width: 100%;
+        height: 300px;
+        margin: 20px 0;
+    }
+    .about-2{
+        width: 100%;
+        height: 750px;
+        .about-2-content{
+            width: 100%;
+            height: 500px;
+        }
+        img{
+            width: 100%;
+            height: 300px;
+        }
+      }
+    }
+}
+
+.aboutText{
+    font-size: 19px;
+    color: #990328;
+    margin: 30px 0px;
+}

@@ -1,0 +1,99 @@
+@import './base.scss';
+
+.search-result{
+    width: 100%;
+}
+.result-main{
+    width: 90.8%;
+    height: auto;
+    margin-left: 5.5%;
+    padding-top: 70px;
+    p{
+        font-weight: 500;
+        margin: 20px 0;
+        padding: 0;
+    }
+}
+.found-resurant-all{
+    display: flex;
+    flex-flow: wrap;
+}
+.search-found-resurant{
+    width: 24%;
+    height: 260px;
+    background: white;
+    margin: 0 0.5% 0.5% 0;
+    cursor: pointer;
+    border: 1px solid #eee;
+    color: black;
+    img{
+        width: 100%;
+        height: 70%;
+    }
+    h4{
+        font-weight: 500;
+        color: #990328;
+    }
+}
+.search-found-resurant:hover{
+    box-shadow: $box-shadow;
+}
+.change-location{
+    padding: 0 10px;
+    color: black;
+    border: 1px solid #eee;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 2px 10px;
+    border-radius: 2px;
+}
+.change-location:hover{
+    color: $text-color-secondary;
+    border: 1px solid $text-color-secondary;
+}
+.searchLeft{
+    width: 16%;
+    height: auto;
+    float: left;
+    padding: 20px 0;
+   
+}
+.DeactivateButton{
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid #eee;
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    background: none;
+    border-radius: 5px;
+}
+.ActiveButton{
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid #eee;
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    background: #990328;
+    color: white;
+    border-radius: 5px;
+}
+.searchRight{
+    width: 81%;
+    min-height: 90vh;
+    float: right;
+}
+@media(max-width: 600px){
+    .search-found-resurant{
+        width: 100%;
+        height: 270px;
+        margin-bottom: 10px;
+    }
+    .change-location{
+        padding:10px;
+        color: black;
+        border: 1px solid #eee;
+        display: inline-block;
+        margin:10px 5px;
+        
+    }
+}

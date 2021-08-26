@@ -1,0 +1,343 @@
+@import './base.scss';
+
+.user-control{
+    width: 100%;
+    min-height: 100vh;
+    background: #eee;
+}
+.user-control-section{
+    width: 100%;
+    padding-top: 6%;
+}
+.user-control-container{
+    width: 28%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    margin-left: 34%;
+    margin-bottom: 20px;
+    text-align: center;
+    // margin-top: 5%;
+    padding: 2%;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    img{
+        width: 50px;
+        height: 50px;
+    }
+    input{
+        width: 90%;
+        padding: 10px 2%;
+        margin: 10px;
+        border: 1px solid rgb(192, 188, 188);
+        outline: none;
+        border-radius: 2px;
+    }
+    button{
+        padding: 10px 30px;
+        background: $primary-background-color;
+        color: white;
+        border-radius: 5px;
+        font-size: 15px;
+        margin: 5px;
+    }
+    button:hover{
+        background: $primary-background-hover-color
+    }
+    h3{
+        color: $primary-background-color;
+        margin: 5px;
+        padding: 0;
+    }
+    p{
+        margin: 10px;
+    }
+    a{
+        color: $primary-background-color;
+    }
+    a:hover{
+        color: $primary-background-hover-color;
+        text-decoration: underline;
+    }
+    .error_message{
+        color: red;
+    }
+}
+.forgot-password{
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    .forgot-password-container{
+        width: 28%;
+        height: auto;
+        background-color: rgb(255, 255, 255);
+        margin-left: 34%;
+        padding: 2%;
+        h3{
+            margin: 0;
+            padding: 10px 0;
+            color: $primary-background-color;
+        }
+        p{
+            margin: 0;
+            padding: 10px 0;
+        }
+        input{
+            width: 90%;
+            padding: 8px 2%;
+            border: 1px solid #eee;
+            margin: 5px 0;
+        }
+        button{
+            padding: 10px 30px;
+            background-color: $primary-background-color;
+            color: white;
+            font-weight: bold;
+            margin: 10px 10px 0 0;
+        }
+        button:hover{
+            background-color: $primary-background-hover-color;
+        }
+        a{
+            font-weight: bold;
+            color: $primary-background-color;
+            padding: 10px;
+        }
+        a:hover{
+            color: $primary-background-hover-color;
+            
+        }
+    }
+}
+.user-profile{
+    width: 100%;
+    .user-profile-container{
+        width: 100%;
+        padding-top: 57px;
+        .user-profile-content{
+            width: 73%;
+            float: right;
+            margin-right: 5%;
+            h2{
+                margin: 20px 5px;
+            }
+            .profile-section{
+                h3{
+                    margin: 20px 0 0 7px;
+                }
+            }
+            .user-change-password{
+                width: 50%;
+                margin-top: 50px;
+                input{
+                    display: block;
+                    width: 50%;
+                    padding: 8px 10px;
+                    margin: 7px 5px;
+                }
+                button{
+                    padding: 10px 20px;
+                    margin: 5px;
+                    background-color: $primary-background-color;
+                    color: white;
+                }
+                button:hover{
+                    background-color: $primary-background-hover-color;
+                }
+            }
+            .user-orders-nav{
+                width: 73%;
+                padding: 30px 0;
+                background: white;
+               
+                li{
+                    display: inline-block;
+                    a{
+                        margin: 10px 5px 0 0;
+                        padding: 10px;
+                        font-weight: 500;
+                        color: rgb(100, 98, 98);
+                    }
+                    a:hover{
+                        color: black;
+                    }
+                }
+                
+                
+            }
+            .user-orders-body{
+                width: 100%;
+                display: flex;
+                padding-top: 10px;
+                .user-orders-all{
+                    width: 100%;
+                    display: flex;
+                    flex-flow: wrap;
+                    justify-content: space-between;
+                }
+                .order-total-price{
+                    color: $text-color-secondary;
+                   .order-total{
+                       font-weight: bold;
+                   }
+                }
+                .merchant-order{
+                    width: 48.5%;
+                    height: 150px;
+                    background: rgb(250, 250, 250);
+                    margin: 0 0 2% 0;
+                    border: 1px solid #eee;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    p{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .user-profile-leftnav{
+        width: 17%;
+        height: 93vh;
+        float: left;
+        background-color: white;
+        border-right: 1px solid #eee;
+        ul{
+            padding: 13px 0 0 28%;
+            li{
+                margin-bottom: 5px;
+                // padding: 15px 0;
+                padding: 0;
+            }
+            a{
+                display: block;
+                padding: 10px 0;
+                width: 100%;
+                font-size: 16px;
+                color: black;
+                font-weight: 500;
+                
+            }
+            a:hover{
+                color: rgb(16, 211, 218);
+            }
+        }
+    }
+}
+.user-view-order{
+    width: 100%;
+    height: 100%;
+    .user-view-order-header{
+        width: 100%;
+        height: 10%;
+        border-bottom: 1px solid #eee;
+        h3{
+            margin: 10px 7px;
+            float: left;
+        }
+        button{
+            float: right;
+            padding: 13px 16px;
+            border-radius: 100%;
+            background-color: rgb(238, 236, 236);
+            margin: 7px;
+        }
+    }
+    .user-view-order-details{
+      width: 100%;
+      height: 90%;
+      overflow-y: scroll;
+      background-color: rgb(230, 225, 225);
+      p{
+         margin: 0 10px;
+      }
+    } 
+}
+
+@media(max-width: 800px){
+    .user-control{
+        background: none;
+    }
+    .user-control-section{
+        background: none;
+        padding-top: 20%;
+        height: 80vh;
+    }
+   .user-control-container{
+        width: 90%;
+        margin-left: 3%;
+        border: none;
+        box-shadow: none;
+   }
+   .forgot-password{
+    .forgot-password-container{
+        width: 90%;
+        margin-left: 3%;
+         border: none;
+         background: none;
+    }
+   }
+   .user-profile-leftnav{
+        display: none;
+   }
+   .user-profile{
+    .user-profile-container{
+        .user-profile-content{
+            width: 95%;
+            float: right;
+            margin-right: 0%;
+        
+            .user-change-password{
+                width: 90%;
+                margin-top: 50px;
+                input{
+                    width: 90%;
+                }
+                button{
+                    padding: 10px 20px;
+                    margin: 5px;
+                    background-color: $primary-background-color;
+                    color: white;
+                }
+                button:hover{
+                    background-color: $primary-background-hover-color;
+                }
+            }
+            .user-orders-nav{
+                padding: 30px 0;
+                background: white;
+                position: fixed;
+                width: 91%;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
+            }
+            .user-orders-nav::-webkit-scrollbar{
+                display: none;
+            }
+            .user-orders-body{
+                width: 100%;
+                display: flex;
+                padding-top: 90px;
+                .user-orders-all{
+                    width: 100%;
+                    display: flex;
+                    flex-flow: wrap;
+                    justify-content: space-between;
+                }
+                .merchant-order{
+                    width: 95%;
+                    height: 150px;
+                    background: rgb(250, 250, 250);
+                    margin: 0 0 2% 0;
+                    border: 1px solid #eee;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    p{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+}

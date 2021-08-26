@@ -1,0 +1,466 @@
+@import './base.scss';
+
+.resturant-view{
+    width: 100%;
+}
+.main-nav-bar{
+    width: 100%;
+    height: 56px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    // box-shadow: 1px 4px 5px rgb(194, 192, 192);
+    border-bottom: 1px solid #eee;
+}
+.resturant-content{
+    padding-top: 75px;
+}
+.resturant-container{
+    width: 56%;
+    height: auto;
+    float: left;
+    margin-left: 5%;
+}
+
+.resturant-all-foods{
+    padding-top: 20px;
+    h3{
+        color:$text-color-secondary
+    }
+}
+.resturant-profile{
+    width: 95.5%;
+    height: 20vh;
+    background: rgb(233, 229, 229);
+    // border: 1px solid #eee;
+    // box-shadow: $box-shadow;
+    border-radius: 2px;
+    overflow: hidden;
+    padding: 2%;
+    h2{
+        margin: 2px 5px;
+        padding: 0;
+    }
+    img{
+        width: 30%;
+        height: 100%;
+        float: right;
+        border-radius: 5px;
+    }
+    span{
+        color: $text-color-secondary;
+        font-weight: bold;
+    }
+    .restu-details{
+
+    }
+}
+
+.food-view{
+    width: 32%;
+    height: 260px;
+    background: rgb(255, 255, 255);
+    margin:0 0 2% 0;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.food-view:hover{
+    box-shadow: $box-shadow;
+}
+.food-image-container{
+    width: 100%;
+    height: 60%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.chefProfile-link{
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #800020;
+    background: white;
+    border: 1px solid white;
+}
+.ChefViewModal{
+    width: 50%;
+    height: 88vh;
+    position: fixed;
+    z-index: 700;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    left: calc(26%);
+    top:8%;
+    border-radius: 5px;
+}
+.chef-view{
+    width: 100%;
+    height: 89%;
+    overflow-y: scroll;
+    h2{
+        margin: 10px 10%;
+        padding: 0;
+        color:$text-color-secondary;
+    }
+    p{
+        margin: 0 10%;
+        padding: 0 0 20px 0; 
+        font-size: 20px;
+    }
+}
+.chef-image{
+    width: 100%;
+    height: 60%;
+   
+    text-align: center;
+    padding: 10px 0;
+}
+.chef-view img{
+    text-align: center;
+    width: 60%;
+    height: 100%;
+   
+}
+.chefProfile-link:hover{
+    border: 1px solid #800020;
+}
+.food-details{
+    width: 100%;
+    height: 30%;
+    padding: 3% 0;
+    h4{
+        margin:0;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    p{
+        color:$text-color-secondary;
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+.cart-view{
+    width: 32%;
+    height: 88vh;
+    background: rgb(255, 255, 255);
+    float: right;
+    position: fixed;
+    margin-left: 63%;
+    // box-shadow: $box-shadow;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    z-index: -70;
+}
+.cart-header h3{
+    text-align: center;
+    margin: 0;
+    padding: 10px 0 0 20px;
+}
+.cart-header p{
+    text-align: center;
+    padding: 5px 0 10px 20px;
+}
+.cart-added-foods{
+    width: 100%;
+    height: 70%;
+    overflow-y: scroll;
+}
+.calculation-container{
+    width: 90%;
+    height: 5%;
+    margin: 5px 2%;
+}
+.calculation-title{
+    float: left;
+    font-weight: 500;
+    color: rgb(121, 119, 119);
+}
+.calculation-value{
+    float: right;
+    color: $text-color-secondary;
+}
+.checkout-button-container{
+    width: 100%;
+    padding-top: 5%;
+}
+.checkout-button{
+    padding: 13px 35%;
+    background: $primary-background-color;
+    color: white;
+    margin-left: 4%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.checkout-button:hover{
+    background: $primary-background-hover-color;
+}
+
+.cart-item{
+    width: 92%;
+    height: 80px;
+    background: #F1F1F1;
+    margin:0 0 3% 3%;
+    cursor: pointer;
+    padding: 1%;
+}
+.cart-item img{
+    width: 20%;
+    height: 90%;
+    margin: 1%;
+    float: left;
+    border-radius: 5px;
+}
+.cart-item-details{
+    width: 75%;
+    height: 100%;
+    float: right;
+}
+.cart-item-info{
+    width: 70%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    p{
+        margin: 0;
+        padding: 1px;
+        color:$text-color-secondary;
+    }
+    button{
+        padding: 6px 10px;
+        font-size: 13px;
+        margin: 0 10px;
+        border: 1px solid #eee;
+        background: white;
+    }
+    button:hover{
+        color: $text-color-secondary;
+        border: 1px solid $text-color-secondary
+    }
+}
+
+
+.cart-item-remove{
+    float: right;
+}
+.cart-item-remove button{
+    margin: 26px 5px;
+    background: none;
+    font-size: 17px;
+}
+.cart-item-remove button:hover{
+    color: red;
+}
+.FoodViewModal{
+    width: 40%;
+    height: 88vh;
+    position: fixed;
+    z-index: 700;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    left: calc(30%);
+    top:8%;
+    border-radius: 5px;
+}
+.DeleteFoodModal{
+    width: 35%;
+    padding: 4% 0;
+    position: fixed;
+    z-index: 700;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    left: calc(32%);
+    top:30%;
+    border-radius: 5px;
+    text-align: center;
+}
+.Backdrop{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 700;
+    left: 0;
+    top: 0;
+    background: #6262635e;
+}
+.modal-header{
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid #eee;
+    p{
+        width: 70%;
+        margin: 10px 0 0 10px;
+        float: left;
+        font-weight: 500;
+        color:$text-color-secondary;
+    }
+    button{
+        float: right;
+        margin: 12px 10px 0 0;
+        padding: 12px 15px;
+        border-radius: 100%;
+    }
+    button:hover{
+        color: $text-color-secondary
+    }
+}
+.modal-details-container{
+    width: 100%;
+    height: 55%;
+    text-align: center;
+    background: rgb(238, 238, 236);
+    overflow-y: scroll;
+    img{
+        max-height: 80%;
+        max-width: 80%;
+        margin: 5px 0;
+    }
+    p{
+        text-align:left;
+        padding: 15px 10%;
+    }
+}
+
+.modal-food-details{
+    text-align: center;
+    button{
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid rgb(185, 182, 180);
+        font-size: 15px;
+        margin: 0 20px;
+        background: white;
+    }
+    button:hover{
+        border: 1px solid $text-color-secondary;
+        color: $text-color-secondary
+    }
+    p{
+        padding: 20px;
+        color: $text-color-secondary;
+        font-size: 18px;
+    }
+    span{
+        font-size: 25px;
+    }
+}
+
+.modal-food-actions{
+    width: 100%;
+    text-align: center;
+    padding: 40px 0 10px 0;
+}
+.add-to-cart-button{
+    padding: 10px 20%;
+    margin:0 10px;
+    background: $primary-background-color;
+    color: white;
+    font-size: 17px;
+}
+.add-to-cart-button:hover{
+    background: $primary-background-hover-color;
+}
+.modal-food-cancelbutton{
+    padding: 10px 5%;
+    font-size: 17px;
+}
+.modal-food-cancelbutton:hover{
+    background: rgb(211, 208, 208);
+}
+.cart-title{
+    width: 80%;
+    float: left;
+}
+.cart-header button{
+    float: right;
+    margin: 15px 10px 0 0;
+    padding: 12px 15px;
+    border-radius: 100%;
+    font-size: 18px;
+}
+.empty-basket{
+    width: 100%;
+    height: 100%;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media(min-width:1001px){
+    .mobile-cart{
+        display: none;
+    }
+    .cart-header button{
+        display: none;
+    }
+    .FoodViewModal{
+        border-radius: none;
+    }
+}
+@media (max-width:1000px){
+    .DeleteFoodModal{
+        width: 90%;
+        left: calc(5%);
+    }
+    .resturant-profile{
+        width: 99.8%;
+        height: 40vh;
+        background: rgb(255, 255, 255);
+        img{
+            height: 60%;
+        }
+    } 
+    .resturant-all-foods{
+        padding-top: 10px;
+    }
+    .FoodViewModal{
+        width: 100%;
+        height: 100vh;
+        top:0;
+        border-radius: none;
+        left: calc(0%);
+    }
+    .resturant-container{
+        width: 90%;
+    }
+    .cart-view{
+        display: none;
+    }
+    .food-view{
+        width: 47%;
+        height: 220px;
+    }
+    .mobile-cart{
+        width: 100%;
+        height: 50px;
+        bottom: 30px;
+        position: fixed;
+    }
+    .mobile-cart button{
+        padding: 15px;
+        background:white;
+        color: $primary-background-color;
+        float: right;
+        margin: 0 30px;
+        font-size: 25px;
+        border-radius: 100%;
+        box-shadow: $box-shadow;
+        border: 1px solid rgb(216, 215, 215);
+        .cart-badge{
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            padding: 5px 10px;
+            border-radius: 50%;
+            background: $primary-background-color;
+            color: white;
+        }
+    }
+}
+

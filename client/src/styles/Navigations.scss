@@ -1,0 +1,188 @@
+@import './base.scss';
+.home-nav{
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+}
+
+.home-nav-left{
+    width: 75%;
+    height: 100%;
+    float: left;
+}
+.logo-container{
+    width: 18%;
+    height: 100%;
+    float: left;
+    img{
+        width: 25%;
+        height: 40px;
+        margin: 8px 0;
+        float: left;
+    }
+    h3{
+        width: 70%;
+        margin: 9px 0;
+        padding: 0;
+        float: right;
+        color: $primary-background-color;
+        font-size: 25px;
+        font-weight: 400;
+    }
+}
+
+.home-nav-left ul{
+    width: 70%;
+    height: 100%;
+    float: right;
+    margin: 0;
+    padding:0;
+}
+.home-nav-left li{
+    display:inline;
+}
+.home-nav-left ul a{
+    padding: 8px 2%;
+    margin: 8px 0;
+    font-size: 17px;
+    display: inline-block;
+    font-weight: 500;
+    color: black;
+}
+.home-nav-right{
+    width: 25%;
+    height: 100%;
+    float: right;
+    button{
+        float: right;
+        padding: 12px 14px;
+        border-radius: 100%;
+        margin-top: 9px;
+    }
+    button:hover{
+        color: $primary-background-color;
+    }
+}
+.home-nav-right a{
+    float: right;
+    padding: 10px 20px;
+    margin: 8px 0;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 3px;
+}
+.signup-link{
+    background: $primary-background-color;
+    color: white;
+}
+.signin-link{
+    color: $primary-background-color;
+}
+.signin-link:hover{
+    color: $primary-background-hover-color;
+}
+.menu-user-options{
+  padding: 20px;
+  li{
+      margin: 5px 0;
+      a{
+          padding: 10px;
+          display: inline-block;
+          color: black;
+          font-size: 17px;
+      }
+      a:hover, button:hover{
+          color: $text-color-secondary
+      }
+      button{
+          padding: 5px 10px;
+          font-size: 17px;
+          background: none;
+      }
+  }
+}
+@media(max-width: 1100px){
+    .home-nav{
+        width: 95%;
+        margin-left: 3%;
+    }
+    .home-nav-left ul{
+        width: 65%;
+    }
+    .logo-container{
+        width: 25%;
+        img{
+            width: 25%;
+        }
+        h3{
+            width: 65%;
+            font-size: 22px;
+            margin: 11px 0;
+        }
+    }
+}
+.mobile-nav-options{
+    padding-top: 10px;
+    li{
+        padding: 10px 30px;
+        margin: 5px;
+        a{
+            font-weight: bold;
+            color: black;
+        }
+    }
+}
+@media(min-width: 801px){
+    .mobile-nav{
+        display: none;
+    }
+}
+@media(max-width: 800px){
+    .home-nav{
+        width: 90%;
+        margin-left: 4%;
+    }
+     .dekstop-nav{
+         display: none;
+     }
+     .mobile-nav{
+         width: 100%;
+         height: 100%;
+         button{
+             float: left;
+             font-size: 25px;
+             margin: 13px 0;
+             background:none ;
+             color: $primary-background-color
+         }
+         button:hover{
+             color: $primary-background-hover-color;
+         }
+         .mobile-logo{
+             width: 50%;
+             height: 100%;
+             float: right;
+             margin-right: 20%;
+             img{
+                 width: 20%;
+                 height: 35px;
+                 float: left;
+                 margin: 12px 0;
+             }
+             h3{
+                 width: 75%;
+                 float: right;
+                 margin: 17px 0;
+                 padding: 0;
+                 color: $primary-background-color
+             }
+         }
+     }
+}
+@media(min-width: 1600px){
+    .home-nav{
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+}

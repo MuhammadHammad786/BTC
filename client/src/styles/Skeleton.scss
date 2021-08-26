@@ -1,0 +1,134 @@
+.foods-skeleton{
+   width: 98.5%;
+   height: auto;
+   display: flex;
+   flex-flow: wrap;
+   justify-content: space-between;
+   .skeleton-food{
+       width: 32%;
+       height: 270px;
+       margin: 1% 0;
+       .skeleton-body{
+           width: 100%;
+           height: 180px;
+           background-color: rgb(180, 177, 177);
+           animation: mymove 1s infinite;
+       }
+      .skeleton-title{
+        width: 90%; 
+        height: 20px;
+        background-color: rgb(180, 177, 177);
+        margin: 5px 0;
+        animation: mymove 1s infinite;
+      }
+      .skeleton-title2{
+        width: 60%; 
+        height: 20px;
+        background-color: rgb(180, 177, 177);
+        animation: mymove 1s infinite;
+      }
+   }
+   
+}
+.orders-skeleton{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  .order-skeleton{
+    width: 48.5%;
+    height: 150px;
+    background-color: rgb(180, 177, 177);
+    animation: mymove 1s infinite;
+    margin: 0 0 2% 0;
+  }
+}
+.resturant-skeleton{
+  width: 90%;
+  margin-left: 5%;
+  padding-top: 75px;
+  .resturant-skeleton-left{
+    width: 67%;
+    float: left;
+    .resturant-skeleton-foods{
+      width: 100%;
+    }
+    .resturant-skeleton-profile{
+      width: 98.5%;
+      height: 50vh;
+      background-color: rgb(180, 177, 177);
+      animation: mymove 1s infinite;
+    }
+    .resturant-skeleton-profile-1{
+      width: 60%;
+      height: 50px;
+      margin: 10px 0;
+      background-color: rgb(180, 177, 177);
+      animation: mymove 1s infinite;
+    }
+    .resturant-skeleton-profile-2{
+      width: 50%;
+      height: 50px;
+      margin: 10px 0 30px 0;
+      background-color: rgb(180, 177, 177);
+      animation: mymove 1s infinite;
+    }
+  }
+  .resturant-skeleton-right{
+    width: 32%;
+    height: 88vh;
+    background: gray;
+    animation: mymove 1s infinite;
+    float: right;
+  }
+}
+@media(max-width: 800px){
+  .resturant-skeleton{
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 75px;
+    .resturant-skeleton-left{
+      width: 100%;
+      float: left;
+      .resturant-skeleton-foods{
+        width: 103%;
+      }
+      .resturant-skeleton-profile{
+        width: 98.5%;
+        height: 30vh;
+        background-color: rgb(180, 177, 177);
+        animation: mymove 1s infinite;
+      }
+      .resturant-skeleton-profile-1{
+        width: 80%;
+        height: 30px;
+      }
+      .resturant-skeleton-profile-2{
+        width: 60%;
+        height: 30px;
+        margin: 10px 0 30px 0;
+        background-color: rgb(180, 177, 177);
+        animation: mymove 1s infinite;
+      }
+    }
+    .resturant-skeleton-right{
+      display: none;
+    }
+  }
+  .foods-skeleton{
+    width: 94%;
+    justify-content: space-between;
+    .skeleton-food{
+        width: 46%;
+        height: 270px;
+        margin: 1% 0;
+    }
+ }
+ .orders-skeleton{
+  .order-skeleton{
+    width: 95%;
+    height: 150px;
+  }
+}
+}

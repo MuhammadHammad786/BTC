@@ -1,0 +1,43 @@
+$text-color: rgb(8, 194, 85);
+$primary-background-color: #990328;
+$primary-background-hover-color: #800020;
+$box-shadow: 1px 4px 5px rgb(194, 192, 192);
+$text-color-secondary :#990328;
+$seconday-background:#eee;
+h4{
+    margin: 0;
+    padding: 3px 5px;
+}
+p{
+    margin: 0;
+    padding: 3px 5px;
+}
+button{
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+input, textarea{
+    font: inherit;
+    outline: none;
+}
+input:focus, textarea:focus{
+    border: 1px solid $primary-background-color;
+    border-radius: 2px;
+}
+img{
+    object-fit: cover;
+}
+@keyframes mymove {
+    from {background-color:#e6e1e1}
+    to {background-color:#c7caca}
+  }
