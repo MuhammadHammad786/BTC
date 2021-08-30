@@ -176,14 +176,14 @@ function RequestResturant() {
               value={password}
               placeholder="Password"
             />
-            <select velue={foodType} onChange={foodTypeChangeHandler}>
+            {/* <select velue={foodType} onChange={foodTypeChangeHandler}>
               <option>Select food types</option>
               <option value="gluten free">Gluten Free</option>
               <option value="halal">Halal</option>
               <option value="vegan">Vegan</option>
               <option value="vegan friendly">Vegan Friendly</option>
               <option value="vegetarian">Vegetarian</option>
-            </select>
+            </select> */}
             <button onClick={resturantRequestHandler}>Get Started</button>
             <p style={{ paddingTop: "10px", fontWeight: "500" }}>Or</p>
             <Link to="/merchant-portal">Log in to Merchant Portal</Link>

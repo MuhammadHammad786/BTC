@@ -29,7 +29,7 @@ function About() {
                 </div>
                 <div className="about-2">
                     <div className="about-2-content">
-                        <p>Order ahead for Michelin star rated cuisine, the finest steak, the freshest seafood and more with BooktheChefs. Advance ordering allows you to get your food when it’s most convenient for you. We set our standards very high so you can enjoy only the best with the greatest convenience.</p>
+                        <p>Order ahead for Michelin star rated cuisine, the finest steak, the freshest seafood and more with BooktheChefs.<br/> Advance ordering allows you to get your food when it’s most convenient for you. We set our standards very high so you can enjoy only the best with the greatest convenience.</p>
                     </div>
                     <img src={Abou2} alt="about" />
                 </div>
