@@ -1,5 +1,5 @@
-import React, {useState, useEffect } from 'react';
-import { useMutation, gql} from '@apollo/client';
+import React, { useState, useEffect } from 'react';
+import { useMutation, gql } from '@apollo/client';
 
 import axios from 'axios';
 
@@ -19,7 +19,7 @@ mutation uploadToAws($file: Upload!){
 }
 `;
 
-function MerchantSettings(){
+function MerchantSettings() {
     let merchant;
     const [complete, setComplete] = useState(false);
     const [spinner, setSpinner] = useState(false);
@@ -38,30 +38,30 @@ function MerchantSettings(){
     const [message, setMessage] = useState('');
 
     const handleFileChange = e => {
-            const file = e.target.files[0];
-            uploadToAws({ variables: { file}})
+        const file = e.target.files[0];
+        uploadToAws({ variables: { file } })
     }
     const [uploadToAws] = useMutation(UPLOAD_FILE, {
-        onCompleted: (data) =>{
+        onCompleted: (data) => {
             console.log(data.uploadToAws.url);
             setCoverImage(data.uploadToAws.url);
-        } 
+        }
     });
-    const oldPassChangeHandler = (e)=>{
+    const oldPassChangeHandler = (e) => {
         setOldPass(e.target.value);
     }
-    const newPassChangeHandler = (e)=>{
+    const newPassChangeHandler = (e) => {
         setNewPass(e.target.value);
     }
-    const passwordChangeHandler = async()=>{
-        try{
-           if(oldPass && newPass){
+    const passwordChangeHandler = async () => {
+        try {
+            if (oldPass && newPass) {
                 setSpinner(true);
                 setMessage('');
                 const changePassword = await axios.post(
                     url,
                     {
-                        query:`
+                        query: `
                         mutation{
                             merchantPasswordChange(
                                 merchantId:"${localStorage.merchantId}",
@@ -74,24 +74,24 @@ function MerchantSettings(){
                         `
                     }
                 );
-                if(changePassword.data.data.merchantPasswordChange.success){
+                if (changePassword.data.data.merchantPasswordChange.success) {
                     setMessage('Password changed!');
-                }else{
+                } else {
                     setMessage(changePassword.data.data.merchantPasswordChange.error_message)
                 }
                 setOldPass('');
                 setNewPass('');
                 setSpinner(false);
-           }
-        }catch(error){
+            }
+        } catch (error) {
             throw error;
         }
     }
-    const updateShowHandler = () =>{
+    const updateShowHandler = () => {
         setUpdate(true);
     }
 
-    const updateCloseHandler = () =>{
+    const updateCloseHandler = () => {
         setName(resturant.name);
         setAbout(resturant.intro);
         setCoverImage(resturant.cover_image);
@@ -100,14 +100,14 @@ function MerchantSettings(){
         setBankAccount(resturant.bank_account);
         setUpdate(false);
     }
-   const updateHandler = async() =>{
-       try {
-           setSpinner(true);
-           setUpdate(false);
-           const resturant = await axios.post(
-               url,
-               {
-                  query:`
+    const updateHandler = async () => {
+        try {
+            setSpinner(true);
+            setUpdate(false);
+            const resturant = await axios.post(
+                url,
+                {
+                    query: `
                     mutation{
                         updateResturant(
                             merchantId:"${localStorage.merchantId}",
@@ -131,8 +131,8 @@ function MerchantSettings(){
                         }
                     }
                   `
-               }
-           );
+                }
+            );
             setName(resturant.data.data.updateResturant.name);
             setEmail(resturant.data.data.updateResturant.email);
             setBankAccount(resturant.data.data.updateResturant.bank_account);
@@ -142,31 +142,31 @@ function MerchantSettings(){
             setCoverImage(resturant.data.data.updateResturant.cover_image);
             setResturant(resturant.data.data.updateResturant);
             setSpinner(false);
-       } catch (error) {
-           throw error;
-       }
-   }
-    const nameChangeHandler = (e)=>{
+        } catch (error) {
+            throw error;
+        }
+    }
+    const nameChangeHandler = (e) => {
         setName(e.target.value);
     }
-    const bankChangeHandler = (e)=>{
+    const bankChangeHandler = (e) => {
         setBankAccount(e.target.value);
     }
-    const introChangeHandler = (e)=>{
+    const introChangeHandler = (e) => {
         setAbout(e.target.value);
     }
-    const openHourChangeHandler = (e)=>{
+    const openHourChangeHandler = (e) => {
         setOpenHour(e.target.value);
     }
-    const closeHourChangeHandler = (e)=>{
+    const closeHourChangeHandler = (e) => {
         setCloseHour(e.target.value);
     }
-    const fetch_resturant = async()=>{
+    const fetch_resturant = async () => {
         try {
             const resturant = await axios.post(
                 url,
                 {
-                    query:` 
+                    query: ` 
                        query{
                            resturant(resturantId:"${localStorage.merchantId}"){
                                _id
@@ -198,89 +198,89 @@ function MerchantSettings(){
             throw error;
         }
     };
-    const timeSetHandler=(time)=>{
+    const timeSetHandler = (time) => {
         const t = parseInt(time.substring(0, 2));
-        if(t > 12){
-            return `${(t - 12) + time.substring(2,5)} pm`;
-        }else{
-         return `${t + time.substring(2,5)} am`;
+        if (t > 12) {
+            return `${(t - 12) + time.substring(2, 5)} pm`;
+        } else {
+            return `${t + time.substring(2, 5)} am`;
         }
-     }
-    if(complete){
+    }
+    if (complete) {
         merchant = <div className="merchant-settings">
-                       <Spinner show={spinner}/>
-                        <UpdateModal show={update} foodViewHandler={updateCloseHandler}>
-                            <div className="update-resturant-header">
-                                <h3>Update</h3>
-                                <button onClick={updateCloseHandler}><FontAwesomeIcon icon={faTimes}/></button>
-                            </div>
-                            <div className="update-resturant-body">
-                                <div className="update-resturant-content">
-                                    { coverImage ?
-                                       <div className="update-resturant-profile"> 
-                                           <img src={coverImage} alt="cover image"/>
-                                           <input onChange={handleFileChange} type="file" except=".png, .jpg"/>
+            <Spinner show={spinner} />
+            <UpdateModal show={update} foodViewHandler={updateCloseHandler}>
+                <div className="update-resturant-header">
+                    <h3>Update</h3>
+                    <button onClick={updateCloseHandler}><FontAwesomeIcon icon={faTimes} /></button>
+                </div>
+                <div className="update-resturant-body">
+                    <div className="update-resturant-content">
+                        {coverImage ?
+                            <div className="update-resturant-profile">
+                                <img src={coverImage} alt="cover image" />
+                                <input onChange={handleFileChange} type="file" except=".png, .jpg" />
 
-                                       </div> :  <div className="update-resturant-profile">
-                                            <div className="merchant-profile-cover">
-                                                <input onChange={handleFileChange} value={coverImage} type="file" except=".png, .jpg"/>
-                                            </div> 
-                                       </div>
-                                     }
-                                    <p>Name</p>
-                                    <input onChange={nameChangeHandler} value={name} type="text" placeholder="Name"/>
-                                    <p>About</p>
-                                    <textarea onChange={introChangeHandler} value={about} type="text" placeholder="Intro about foods type within 100 words"/>
-                                    <p>Business hour</p>
-                                    <span style={{marginBottom:"5px"}}>Open</span>
-                                    <input onChange={openHourChangeHandler} value={openHour} type="time" min="09:00" max="18:00"/>
-                                    <span style={{marginBottom:"5px"}}>Close</span>
-                                    <input onChange={closeHourChangeHandler} value={closeHour} type="time" min="09:00" max="18:00"/>
-                                    <p>Bank account</p>
-                                    <input onChange={bankChangeHandler} value={bank_account} type="text" placeholder="Bank account"/>
-                                    <button onClick={updateHandler} className="update-resturant-button">Update</button>
+                            </div> : <div className="update-resturant-profile">
+                                <div className="merchant-profile-cover">
+                                    <input onChange={handleFileChange} value={coverImage} type="file" except=".png, .jpg" />
                                 </div>
                             </div>
-                        </UpdateModal>
-                        <h2>Profile and settings</h2>
-                        <div className="merchant-cover">
-                            {
-                             coverImage ?
-                              <div className="merchant-cover-show">
-                                  <img src={coverImage} alt="cover"/>
-                                  <button onClick={updateShowHandler}>Change cover image</button>
-                              </div>:
-                              <div className="merchant-cover-button">
-                                <button onClick={updateShowHandler}><FontAwesomeIcon icon={faPlus}/> Add cover image</button>
-                              </div> 
-                            }
-                        </div>
-                        <h3>Name</h3>
-                        <p>{name} <button onClick={updateShowHandler}><FontAwesomeIcon icon={faEdit}/></button></p>
-                        <h3>Email</h3>
-                        <p>{email}</p>
-                        <h3>About</h3>
-                        <p>{about ? about: <button onClick={updateShowHandler}><FontAwesomeIcon icon={faPlus}/> Add restaurant intro</button>}</p>
-                        <h3>Business hour</h3>
-                        <p>Open {timeSetHandler(openHour)} Close {timeSetHandler(closeHour)} <button onClick={updateShowHandler}><FontAwesomeIcon icon={faEdit}/></button></p>
-                        <h3>Bank Account</h3>
-                        {bank_account ? <p>{bank_account} <button onClick={updateShowHandler}><FontAwesomeIcon icon={faEdit}/></button></p>:<button>Add bank account</button>}
-                  
-                      <div className="merchant-change-password">
-                        <h3>Change Password</h3>
-                        <input onChange={oldPassChangeHandler} value={oldPass} type="password" placeholder="Old password"/>
-                        <input onChange={newPassChangeHandler} value={newPass} type="password" placeholder="New password"/>
-                        <p>{message}</p>
-                        <button onClick={passwordChangeHandler}>Change Password</button>
-                      </div>
+                        }
+                        <p>Name</p>
+                        <input onChange={nameChangeHandler} value={name} type="text" placeholder="Name" />
+                        <p>About</p>
+                        <textarea onChange={introChangeHandler} value={about} type="text" placeholder="Introduction re Restaurant" />
+                        <p>Business hour</p>
+                        {/* <span style={{marginBottom:"5px"}}>Open</span>
+                                    <input onChange={openHourChangeHandler} value={openHour} type="time" min="09:00" max="18:00"/>
+                                    <span style={{marginBottom:"5px"}}>Close</span>
+                                    <input onChange={closeHourChangeHandler} value={closeHour} type="time" min="09:00" max="18:00"/> */}
+                        <p>Bank account</p>
+                        <input onChange={bankChangeHandler} value={bank_account} type="text" placeholder="Bank account" />
+                        <button onClick={updateHandler} className="update-resturant-button">Update</button>
                     </div>
-    }else{
+                </div>
+            </UpdateModal>
+            <h2>Profile and settings</h2>
+            <div className="merchant-cover">
+                {
+                    coverImage ?
+                        <div className="merchant-cover-show">
+                            <img src={coverImage} alt="cover" />
+                            <button onClick={updateShowHandler}>Change cover image</button>
+                        </div> :
+                        <div className="merchant-cover-button">
+                            <button onClick={updateShowHandler}><FontAwesomeIcon icon={faPlus} /> Add cover image</button>
+                        </div>
+                }
+            </div>
+            <h3>Name</h3>
+            <p>{name} <button onClick={updateShowHandler}><FontAwesomeIcon icon={faEdit} /></button></p>
+            <h3>Email</h3>
+            <p>{email}</p>
+            <h3>About</h3>
+            <p>{about ? about : <button onClick={updateShowHandler}><FontAwesomeIcon icon={faPlus} /> Add restaurant intro</button>}</p>
+            <h3>Business hour</h3>
+            <p>Open {timeSetHandler(openHour)} Close {timeSetHandler(closeHour)} <button onClick={updateShowHandler}><FontAwesomeIcon icon={faEdit} /></button></p>
+            <h3>Bank Account</h3>
+            {bank_account ? <p>{bank_account} <button onClick={updateShowHandler}><FontAwesomeIcon icon={faEdit} /></button></p> : <button>Add bank account</button>}
+
+            <div className="merchant-change-password">
+                <h3>Change Password</h3>
+                <input onChange={oldPassChangeHandler} value={oldPass} type="password" placeholder="Old password" />
+                <input onChange={newPassChangeHandler} value={newPass} type="password" placeholder="New password" />
+                <p>{message}</p>
+                <button onClick={passwordChangeHandler}>Change Password</button>
+            </div>
+        </div>
+    } else {
         merchant = <p>Loading....</p>
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch_resturant();
-    },[]);
+    }, []);
 
     return merchant;
 };

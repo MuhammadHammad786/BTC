@@ -11,13 +11,13 @@ function Orders(){
         <div className="user-orders-section">
              <ul className="user-orders-nav">
                <li>
-                   <NavLink activeStyle={{borderBottom:"2px solid rgb(16, 211, 218)"}} exact to="/user-profile/orders">Pending orders</NavLink>
+                   <NavLink activeStyle={{borderBottom:"3px solid #990328"}} exact to="/user-profile/orders">Pending orders</NavLink>
                </li>
                <li>
-                   <NavLink activeStyle={{borderBottom:"2px solid rgb(16, 211, 218)"}} exact to="/user-profile/orders/confirmed">Confirmed orders</NavLink>
+                   <NavLink activeStyle={{borderBottom:"3px solid #990328"}} exact to="/user-profile/orders/confirmed">Confirmed orders</NavLink>
                </li>
                <li>
-                   <NavLink activeStyle={{borderBottom:"2px solid rgb(16, 211, 218)"}} exact to="/user-profile/orders/picked">Pickup orders</NavLink>
+                   <NavLink activeStyle={{borderBottom:"3px solid #990328"}} exact to="/user-profile/orders/picked">Pickup orders</NavLink>
                </li>
            </ul>
            <div className="user-orders-body">
